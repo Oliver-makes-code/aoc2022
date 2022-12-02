@@ -1,5 +1,5 @@
 async function part1() {
-    const text = await Deno.readTextFile("./01.txt")
+    const text = (await Deno.readTextFile("./01.txt")).trim()
     const textSplit = text.split("\n\n")
     let max = 0
     for (const i of textSplit) {
@@ -12,7 +12,7 @@ async function part1() {
 }
 
 async function part2() {
-    const text = await Deno.readTextFile("./01.txt")
+    const text = (await Deno.readTextFile("./01.txt")).trim()
     const textSplit = text.split("\n\n")
     const numbers: number[] = []
     for (const i of textSplit) {
@@ -22,7 +22,6 @@ async function part2() {
         numbers.push(count)
     }
     numbers.sort((a, b) => {return a - b})
-    numbers.pop()
     console.log(numbers.pop()! + numbers.pop()! + numbers.pop()!)
 }
 

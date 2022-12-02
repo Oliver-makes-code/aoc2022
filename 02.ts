@@ -1,4 +1,4 @@
-const text = await Deno.readTextFile("02.txt")
+const text = (await Deno.readTextFile("02.txt")).trim()
 
 const numbers: {[value:string]:number} = {
     A: 1, //rock
