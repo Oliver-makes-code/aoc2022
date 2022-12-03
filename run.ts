@@ -1,3 +1,1 @@
-const day = Deno.args[0]
-
-import(`./${day}.ts`)
+import(`./${Deno.args[0]}.ts`)
